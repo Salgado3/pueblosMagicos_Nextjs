@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="../public/favicon.ico" />
         <meta
           name="description"
           content="Magical Towns (Pueblos Magicos) of Mexico. Find your next destination"

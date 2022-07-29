@@ -1,6 +1,6 @@
 .container {
   max-width: 100%;
-  height: 175px;
+  height: 150px;
   background-image: url("../public/images/gtoBanner.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -9,12 +9,15 @@
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
+  display: block;
+  height: 36px;
   align-items: center;
   color: rgb(2, 2, 2);
+  margin: 0;
+}
+.header:hover {
+  color: rgb(3, 236, 189);
 }
 
 .backToHome {
-  margin: 3rem 0 0;
 }
