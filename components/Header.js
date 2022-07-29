@@ -1,4 +1,8 @@
 import Head from "next/head";
+import styles from "./header.module.css";
+import Link from "next/link";
+export const siteTitle = "Los Puebls";
+
 export default function Header() {
   return (
     <>
@@ -17,8 +21,8 @@ export default function Header() {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-        <h1>
+      <header className={styles.container}>
+        <h1 className={styles.header}>
           <Link href={"/"}>Pueblos Magicos de Mexico </Link>
         </h1>
       </header>
