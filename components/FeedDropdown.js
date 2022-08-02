@@ -1,25 +1,23 @@
-import { useNavigation } from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 export default function DropDown() {
-  const [airportCode, setAirportCode] = useState();
+  const router = useRouter();
+  const [route, setRoute] = useState();
   const handleOnChange = (e) => {
-    setAirportCode(e.target.value);
+    setRoute(e.target.value);
     console.log("handle on change", e.target.value);
   };
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(airportCode);
+    console.log("the airport code is:", route);
+    router.push("api/getAirports/" + route);
   }
 
   return (
     <div className="airportFeedForm">
       <form id="formAirCodes" onSubmit={(e) => handleSubmit(e)}>
         <label htmlFor="formAirCodes">
-          <select
-            id="formAirCodes"
-            value={airportCode}
-            onChange={handleOnChange}
-          >
+          <select id="formAirCodes" value={route} onChange={handleOnChange}>
             <option>Select an Airport</option>
             <option value="AGU">
               Jesús Terán Peredo International Airport (AGU)
